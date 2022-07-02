@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,400i,700" >
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Acme&display=swap" >
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">        
+    </head>
+    <body>
+        <img class="background-img" src="assets/bg.jpg"></img>        
+        <div class="ls-container">
+            <div class="serverlogo">
+                <img class="logo" src="assets/logo.png">
+            </div>
+        </div>        
+        <div class="progressbar"></div>               
+        <div class="loader"> 
+            <div class="face">
+              <div class="circle"></div>
+            </div>
+            <div class="face">
+              <div class="circle"></div>
+            </div>
+            
+        </div>
+        
+    </body>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,700');
+      @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
+      body {
+        width: 100%;
+        height: auto;
+        overflow: hidden;                        
+      }
+      .serverlogo {
+        width: auto;
+        height: auto;
+        color: #e7e7e7;
+        font-family: 'Raleway', sans-serif;        
+        align-items: center;
+        margin: 12% 33% auto;
+        animation: travel 5s;
+        position: absolute;
+      }
+      .background-img {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        position: absolute;
+        opacity: 95%;
+        top: 0;
+        left: 0;
+        z-index: 0;
+      }    
+      .progressbar {
+        width: 99%;    
+        height: 1.5vh;
+        position: absolute;
+        bottom: 0.4em;        
+        background: rgba(255, 255, 255, 0.781);                
+        overflow: hidden;        
+      }     
+      .progressbar:after {
+        content: '';
+        display: block;
+        width: 99%;
+        height: 1.5vh;
+        background: #126297;
+        animation: load 60s linear;
+      }
+      .loader {
+        width: 30em;
+        height: 30em;
+        font-size: 2.25em;
+        bottom: 2em;
+        margin-left: 18%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0.5;
+      }
+      .loader .face {
+        position: absolute;
+        border-radius: 50%;
+        border-style: solid;
+        animation: animate 4s linear infinite;
+      }
+      .loader .face:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        color: white;
+        border-color: currentColor transparent transparent currentColor;
+        border-width: 0.2em 0.2em 0em 0em;
+        --deg: -45deg;
+        animation-direction: normal;
+      }
+      .loader .face:nth-child(2) {
+        width: 70%;
+        height: 70%;
+        color: white;
+        border-color: currentColor currentColor transparent transparent;
+        border-width: 0.2em 0em 0em 0.2em;
+        --deg: -135deg;
+        animation-direction: reverse;
+      }
+      .loader .face .circle {
+        position: absolute;
+        background-color: transparent;
+        transform: rotate(var(--deg));
+        transform-origin: left;
+      }    
+      @keyframes travel {
+        from {
+            opacity: 0.01;
+            transform: translateY(130px);
+        }
+
+        to { 
+            transform: translateY(0px);
+        }
+      }
+      @-moz-keyframes load {
+        0% {
+          width: 0;
+        }
+        10% {
+          width: 5%;
+        }
+        20% {
+          width: 15%;
+        }
+        30% {
+          width: 25%;
+        }
+        40% {
+          width: 30%;
+        }
+        50% {
+          width: 44%;
+        }
+        60% {
+          width: 50%;
+        }
+        70% {
+          width: 72%;
+        }
+        80% {
+          width: 84%;
+        }
+        90% {
+          width: 92%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @-webkit-keyframes load {
+        0% {
+          width: 0;
+        }
+        10% {
+          width: 5%;
+        }
+        20% {
+          width: 15%;
+        }
+        30% {
+          width: 25%;
+        }
+        40% {
+          width: 30%;
+        }
+        50% {
+          width: 44%;
+        }
+        60% {
+          width: 50%;
+        }
+        70% {
+          width: 72%;
+        }
+        80% {
+          width: 84%;
+        }
+        90% {
+          width: 92%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @-o-keyframes load {
+        0% {
+          width: 0;
+        }
+        10% {
+          width: 5%;
+        }
+        20% {
+          width: 15%;
+        }
+        30% {
+          width: 25%;
+        }
+        40% {
+          width: 30%;
+        }
+        50% {
+          width: 44%;
+        }
+        60% {
+          width: 50%;
+        }
+        70% {
+          width: 72%;
+        }
+        80% {
+          width: 84%;
+        }
+        90% {
+          width: 92%;
+        }
+        100% {
+          width: 100%;
+        }
+      }
+      @keyframes load {
+        0% {
+          width: 0;
+        }
+        10% {
+          width: 5%;
+        }
+        20% {
+          width: 15%;
+        }
+        30% {
+          width: 25%;
+        }
+        40% {
+          width: 30%;
+        }
+        50% {
+          width: 44%;
+        }
+        60% {
+          width: 50%;
+        }
+        70% {
+          width: 72%;
+        }
+        80% {
+          width: 84%;
+        }
+        90% {
+          width: 92%;
+        }
+        100% {
+          width: 100%;
+        }
+      } 
+
+      @keyframes animate {
+          to {
+              transform: rotate(1turn);
+          }
+      }     
+    </style>
+</html>
